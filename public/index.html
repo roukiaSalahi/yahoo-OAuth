@@ -20,13 +20,15 @@
       client_id: 'dj0yJmk9TVlPUnBaSjhWV0VwJmQ9WVdrOVZqUkhjSHBDYUhZbWNHbzlNQT09JnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTJj',
       redirect_uri: 'https://localhost:3000/oauth',
       response_type: 'code',
-      scope: 'user%20public_repo',
+      // scope: 'openid email',
       // nonce: 'n-0S6_WzA2Mj',
     }
 
     let QueryString = Object.keys(options).map((key) => {
       return `${key}=` + encodeURIComponent(options[key]);
+      
     }).join("&");
+    
 
     let authURL = `${URL}?${QueryString}`;
 
